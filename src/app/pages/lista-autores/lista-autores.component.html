@@ -1,0 +1,50 @@
+<div>
+	<ng-template #content let-modal>
+		<div class="modal-header">
+			<h4 class="modal-title" id="modal-basic-title">Autor {{autorInput}}</h4>
+			<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('close')"></button>
+		</div>
+		<div class="modal-body">
+			<app-obras
+				[autor]="autorInput"
+			>
+			</app-obras>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-outline-dark" (click)="modal.close('ok')">Ok</button>
+		</div>
+	</ng-template>
+	
+
+<h3>Lista de autores</h3>
+
+<div *ngIf="cargando" d-flex justify-content-center>
+	<div class="spinner-border" role="status">
+	  <span class="sr-only">Loading...</span>
+	</div>
+  </div>
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-sm-4">Autor</th>
+			<th class="col-sm-4">Accion</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let autor of autores; index as i">
+			<td>
+				{{ autor }}
+			</td>
+			<td>
+                <button class="btn btn-info" (click)="verObras(autor,content)">Ver Obras</button>
+            </td>
+			
+		</tr>
+	</tbody>
+</table>
+
+</div>
+
+

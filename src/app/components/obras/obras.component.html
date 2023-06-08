@@ -1,0 +1,50 @@
+<div>
+	<div *ngIf="cargando == true" spinner-grow role="status">
+		<span class="sr-only"></span>
+	</div>
+	<ng-template #content let-modal>
+		<div class="modal-header">
+			<h4 class="modal-title" id="modal-basic-title">{{title}}</h4>
+			<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('close')"></button>
+		</div>
+		<div class="modal-body">
+			<textarea class="form-control" id="exampleTextarea" [rows]="rows">
+				{{fragmento}}
+			</textarea>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-outline-dark" (click)="modal.close('ok')">Ok</button>
+		</div>
+	</ng-template>
+</div>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">Titulo</th>
+			<th scope="col">Fragmento</th>
+			<th scope="col">Favorita</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let obra of obras; index as i">
+			<td>
+				{{ obra.title }}
+			</td>
+			<td>
+				<button
+					(click)="verFragmento(obra,content)" 
+					class="btn btn-sm-info">...</button>
+			</td>
+			<td>
+				<button
+					
+					(click)="marcarFavorita(obra)" 
+					class="btn btn-sm-secondary">F
+				</button>
+			</td>
+			
+			
+		</tr>
+	</tbody>
+</table>

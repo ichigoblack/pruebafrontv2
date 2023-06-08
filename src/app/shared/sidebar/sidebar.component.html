@@ -1,0 +1,17 @@
+<div class="sidebar">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <button class="btn btn-secondary"  (click)="irFavoritas()">Favoritas</button>
+        </li> 
+        &nbsp;
+        <li class="nav-item">
+            <button class="btn btn-secondary"  (click)="irAutores()">Autores</button>
+        </li>  
+      <li class="nav-item" *ngFor="let obra of obrasRandom">
+        <a class="nav-link"> <b>Obra: </b>{{obra.title}} </a> 
+        <a> <b>Autor: </b> {{obra.author}}</a>
+        
+      </li>
+      
+    </ul>
+</div>

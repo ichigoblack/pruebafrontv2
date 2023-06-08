@@ -6,6 +6,8 @@
     z-index: 100;
     padding: 48px 20px;
     background-color: #f8f9fa;
+    font-size-adjust: true;
+    font-size: small;
   }
 
   .sidebar .nav-link {
@@ -13,5 +15,6 @@
   }
 
   .content {
-    margin: auto;
+    margin-left: 220px;
+    padding: 20px;
   }

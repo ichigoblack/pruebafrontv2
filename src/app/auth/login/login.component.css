@@ -1,0 +1,54 @@
+
+.login-form {
+    width: 25%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 5%
+  }
+  span{
+    margin-left: 10px;
+  }
+
+  
+  .login-form h2 {
+    text-align: center;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-form button {
+    width: 85%;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+  }
+  
+  .login-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos específicos para el enlace de olvidó su contraseña */
+  .login-form .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .login-form .forgot-password a {
+    color: #666;
+  }
+  
+  .login-form .forgot-password a:hover {
+    color: #333;
+  }

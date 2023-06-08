@@ -1,0 +1,22 @@
+<h3>Obras Favoritas</h3>
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th class="col-sm-4">Obra</th>
+			<th class="col-sm-4">Accion</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let obra of obrasFavoritas; index as i">
+			<td>
+				{{ obra.title }}
+			</td>
+			<td>
+                <button class="btn btn-info" (click)="eliminar(obra)">Eliminar</button>
+            </td>
+			
+		</tr>
+	</tbody>
+</table>
