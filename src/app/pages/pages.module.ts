@@ -5,28 +5,39 @@ import { Route, RouterModule } from '@angular/router';
 import { ObrasfavoritasComponent } from './obrasfavoritas/obrasfavoritas.component';
 import { ComponentsModule } from '../components/components.module';
 import { AuthGuard } from '../guards/auth.guard';
+import { MainComponent } from './main/main.component';
+import { SidebarComponent } from '../shared/sidebar/sidebar.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes:Route[] = [
   {
-    path:'autores',
-    component:ListaAutoresComponent
+    path:'main',
+    component:MainComponent,
+    children:[
+      {
+        path:'',
+        component:ListaAutoresComponent
+      },
+      {
+        path:'obrasfavoritas',
+        canActivate : [AuthGuard],
+        component:ObrasfavoritasComponent
+      }
+    ]
   },
-  {
-    path:'obrasfavoritas',
-    canActivate : [AuthGuard],
-    component:ObrasfavoritasComponent
-  }
 ]
 
 @NgModule({
   declarations: [
     ListaAutoresComponent,
-    ObrasfavoritasComponent
+    ObrasfavoritasComponent,
+    MainComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    ComponentsModule
+    ComponentsModule,
+    SharedModule
   ]
 })
 export class PagesModule { }

@@ -16,12 +16,12 @@ const routes: Routes = [
     },
     {
       path:'',
-      redirectTo:'app/autores',
+      redirectTo:'app/main',
       pathMatch:'full'
     },
     {
       path:'**',
-      redirectTo:'app/autores',
+      redirectTo:'app/main',
       pathMatch:'full'
     }
 ];

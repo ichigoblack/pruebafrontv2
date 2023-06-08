@@ -1,15 +1,2 @@
-<div
-    [ngClass]="{'container': autenticado}">
-    <div 
-        *ngIf="autenticado"
-        [ngClass]="{'sidebard col-4': autenticado}"
-        >
-        <app-sidebar></app-sidebar>
-    </div>
-    <div
-        [ngClass]="{'content col-8': autenticado}" 
-        >
-        <router-outlet></router-outlet>
-    </div>
-
-</div>
+<router-outlet></router-outlet>
+    
