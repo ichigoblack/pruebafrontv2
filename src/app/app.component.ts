@@ -7,7 +7,7 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'proyecto';
+  title = 'prueba front';
 
   autenticado = false;
 
@@ -22,7 +22,5 @@ export class AppComponent implements OnInit {
       this.autenticado = true;
     }
   }
-
-
 
 }

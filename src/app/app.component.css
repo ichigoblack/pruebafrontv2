@@ -5,12 +5,12 @@
     left: 0;
     z-index: 100;
     padding: 48px 20px;
-    background-color: #f8f9fa;
+    background-color: #aad3fc;
     width: 40%;
   }
 
   .sidebar .nav-link {
-    color: #333;
+    color: #5f5858;
   }
 
   .content {
